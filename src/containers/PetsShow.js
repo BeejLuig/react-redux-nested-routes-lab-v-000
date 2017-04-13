@@ -13,9 +13,12 @@ const PetsShow = (props) => {
 };
 
 const mapStateToProps = (state, ownProps) => {
-  return {
-    pet: {}
-  };
+  const pets = state.pets;
+  const id = ownProps.routeParams.id;
+  // eslint-disable-next-line
+  const pet = pets.find(pet => id == pet.id);
+
+  return pet ? { pet } : { pet: {} }
 };
 
 export default connect(mapStateToProps)(PetsShow);

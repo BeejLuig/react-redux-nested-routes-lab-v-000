@@ -1,6 +1,6 @@
 import React from 'react';
 import NavBar from './NavBar';
-import PetsPage from '../containers/PetsPage';
+//import PetsPage from '../containers/PetsPage';
 
 export default (props) => {
   return (
